@@ -19,10 +19,8 @@
   </head>
   <body>
   	<main id="map" class="ga-map"></main>
-     <!--  <h1>Hello, world!</h1> -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoRr_6JjFamlOX4Rd_cKwdM3EAfMJa74s&v=3.exp&libraries=visualization&callback=onGoogleReady" async defer>
       </script>
-
       <script>
 	      function onGoogleReady() {
 	       // Init map
@@ -49,7 +47,7 @@
 	          map: map
 	       });
 
-	        setInterval(function() {
+        setInterval(function() {
 	         $.get('http://localhost:8080/gps',function(data) {
 	           // Assume object returned is: {lat: <num>, lon: <num>} format
 	           var latlng = new google.maps.LatLng(data.lat / 1e7, data.lon / 1e7);
@@ -64,7 +62,7 @@
 	           // Update polyfill path
 	           var path = flightPath.getPath();
 	           path.push(latlng);
-
+	           
 	           // Update marker
 	           marker.setPosition(latlng);
 	         });
