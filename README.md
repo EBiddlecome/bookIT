@@ -1,6 +1,8 @@
 #drocloud
 
-cloud based drone control implemented with python & js 
-heatmaps, telemetry, and other features enabling aircraft tracking via browser
+cloud based drone control implementation with python & js 
 
-with thanks to dronesmith technologies et al!
+heatmaps, telemetry, and other features enabling aircraft tracking via browser
+mavlink
+
+with thanks & credit where credit is due dronesmith technologies, mavlink, google maps api, etc
