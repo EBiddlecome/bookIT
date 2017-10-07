@@ -1,0 +1,94 @@
+Pre-engagement
+
+Information Gathering
+- OSINT
+- Port Scanning
+- Social Engineering
+
+Threat Modeling & Vulnerability Analysis
+- Finding Vulns
+- Capturing traffic
+  - Wireshark
+  - ARP Cache Poisoning 
+  - DNS Cache Poisioning
+  - SSL Attacks
+  - SSLstrip
+
+
+Exploitation
+- Password Attacks
+  - Hydra
+  - recovering hashes from a Windows SAM file
+  - John the Ripper
+  - Cracking Linux passwords
+  - Cracking config file passwords
+  - Win Credential Editor plaintext pw dump
+
+- Metsploit
+  - Creating Standalone Payloads with Msfvenom
+  - Meterpreter
+    - Commands
+      - upload
+      - getuid
+    - Scripts
+  - Bind & Reverse Shells
+  - Setting a Payload Manually
+  - MSFCLI
+  - Msfvenom for Payloads
+  - Aux Modules
+
+- Client Side Exploitation
+  - Bypass filters w/ Metasploit Payloads
+    - all ports
+    - http and https payloads
+  - Browser Exploitation
+  - Java Exploits
+  - PDF expoits
+  - browser_autopwn
+  - Winamp
+
+- Bypass Antivirus
+  - msfvenom & trojans
+  - custom cross compiling
+  - encoding
+- BO Win
+- BO Linux
+- Fuzzing
+- Porting Exploits
+- SEH Overwrite
+
+
+Post Exploitation
+- PrivEsc
+  - Win GetSystem
+  - Local Escalation Module for Win
+  - Bypassing UAC on Win
+  - Udev PrivEsc on Linux
+- Gathering credentials
+- Checking BASH history
+- Search for files
+
+Lateral Movement
+- Pass the Hash
+- Token forging
+- SMB Capture
+
+Pivoting
+- Adding a Route in Metasploit????????
+- running an exploit through a pivot????
+- socks4a/proxychains
+
+Persistence
+- Add a user
+- Metasploit persistence?????
+
+- Web App Testing
+  - Burp
+  - SQLmap
+  - XML
+  - XSS attacks
+  - CORS forgery
+  - w3af
+
+Reporting
+
