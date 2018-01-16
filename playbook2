@@ -1,0 +1,125 @@
+COMPETITION NOTES
+
+http://lockboxx.blogspot.com/2016/11/collegiate-penetration-testing.html
+* Be sure to read this, it's by one of the people who designed the competiton
+
+https://medium.com/uber-security-privacy/game-on-b11490265b70
+
+https://highon.coffee/blog/penetration-testing-tools-cheat-sheet/
+
+
+
+GATHER OSINT
+
+- Google Dorks
+  - https://www.exploit-db.com/google-hacking-database/
+  - https://www.technotification.com/2017/05/google-dorks-the-hackers-way.html
+-https://bynd.com/news-ideas/google-advanced-search-comprehensive-list-google-search-operators/
+  - Repo of Google Dorks:  https://gist.github.com/clarketm/919457847cece7ce40323dc217623054
+  - 05/2017 List of Dorks:  https://edgylabs.com/google-dorks-list/
+
+- theHarvester (Python script that enumerates interwebs and send you corporate emails and hosts, super handy & free/publicly available)
+
+- Social Media (LinkedIn, FB)
+
+- WHOIS data
+- DNS IP lookup
+
+
+
+
+ENUMERATE
+
+
+- Zone Transfers
+- SMB Windows Enum
+- Null session testing
+- Blindly Mapping Internal Networks: https://blog.netspi.com/10-techniques-for-blindly-mapping-internal-networks/
+NMAP
+
+nmap -sn 38.100.193.0-250
+
+Fast scan top 100 ports:  nmap -F 192.168.1.1
+
+Use greppable output flag (-oG) and scan results to file:
+nmap -sn 38.100.193.40-100 -oG pingSweepNmap
+
+cut out just the IPs of hosts that are up:
+grep Up pingSweepNmap | cut -d" " -f2
+
+
+OS/Banner grab :
+nmap -A 38.100.193.40
+
+TCP Window Scan (-sW) - for stuff behind firewall
+
+https://hostpresto.com/community/tutorials/nmap-command-line-tips-and-tricks/
+tcpDump
+
+https://hackertarget.com/nmap-cheatsheet-a-quick-reference-guide/
+
+NETCAT
+Netcat can be used to see:
+- if single port is open or closed: $ nc -zv 192.168.1.15 22
+- if multiple ports are open or closed: $ nc -zv 192.168.56.10 20-80
+- read a banner from a port 
+- connect & interact with a network service manually
+
+
+EXPLOIT
+
+Get Shells, Establish Control, Profit
+
+- Metasploit
+- Searching for Exploits
+- Modifying Exploits
+- SQL injection (SQLmap for sure)
+- Brute forcing with Hydra & Jack the Ripper
+- Windows RDP & RPCz
+- Reverse Shells:  https://highon.coffee/blog/reverse-shell-cheat-sheet/
+
+
+
+EXPLOITING WEB APPLICATIONS
+
+- Webserver Enumeration & Exploiting
+- Authentication Exploits
+
+https://www.pentestpartners.com/security-blog/threat-intelligence-log-file-hacking/
+
+
+
+PRIVESC
+
+Brute GitHub/BitBucket?
+
+
+PIVOT
+
+- SSH
+- Meterpreter
+- Pivoting With Metasploit: https://www.offensive-security.com/metasploit-unleashed/pivoting/
+- 
+
+
+
+LOGGING & REPORTING
+
+
+https://www.cybrary.it/0p3n/penetration-testing-report/
+
+http://securitymusings.com/article/2211/pen-testing-is-boring-logging-requirements
+
+https://www.linkedin.com/pulse/20140620081019-129675037-writing-an-effective-penetration-testing-report/
+
+https://www.sans.org/reading-room/whitepapers/testing/writing-penetration-testing-report-33343
+
+https://github.com/SerpicoProject/Serpico
+
+
+AUTOMATE??
+
+
+
+
+
